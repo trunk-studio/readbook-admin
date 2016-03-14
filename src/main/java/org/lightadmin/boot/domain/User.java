@@ -14,8 +14,8 @@ public class User implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
-    @GeneratedValue(generator = "system-uuid")
-    @GenericGenerator(name = "system-uuid", strategy = "uuid")
+    @GeneratedValue(generator = "user-uuid")
+    @GenericGenerator(name = "user-uuid", strategy = "uuid2")
     @Column(columnDefinition = "char(36) BINARY CHARACTER SET utf8 COLLATE utf8_bin")
     private String id;
 
@@ -32,6 +32,7 @@ public class User implements Serializable {
     private String email;
 
     @Column(name = "username", columnDefinition = "varchar(255) BINARY CHARACTER SET utf8 COLLATE utf8_bin", unique = true)
+//    @UniqueConstraint()
     private String username;
 
     @Column(name = "fullName", columnDefinition = "varchar(255) BINARY CHARACTER SET utf8 COLLATE utf8_bin")
