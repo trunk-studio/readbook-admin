@@ -42,6 +42,10 @@ public class User implements Serializable {
     @Enumerated(EnumType.STRING)
     private Gender gender;
 
+    @ManyToOne
+    @JoinColumn(name = "siteId", referencedColumnName = "id", foreignKey = @ForeignKey(name = "SiteId"))
+    private Site siteId;
+
     public String getId() {
         return id;
     }
@@ -104,5 +108,13 @@ public class User implements Serializable {
 
     public void setGender(Gender gender) {
         this.gender = gender;
+    }
+
+    public Site getSiteId() {
+        return siteId;
+    }
+
+    public void setSiteId(Site siteId) {
+        this.siteId = siteId;
     }
 }
