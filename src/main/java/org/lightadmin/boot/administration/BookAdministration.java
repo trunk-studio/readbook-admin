@@ -2,11 +2,9 @@ package org.lightadmin.boot.administration;
 
 import org.lightadmin.api.config.AdministrationConfiguration;
 import org.lightadmin.api.config.builder.EntityMetadataConfigurationUnitBuilder;
-import org.lightadmin.api.config.builder.FiltersConfigurationUnitBuilder;
 import org.lightadmin.api.config.builder.PersistentFieldSetConfigurationUnitBuilder;
 import org.lightadmin.api.config.unit.EntityMetadataConfigurationUnit;
 import org.lightadmin.api.config.unit.FieldSetConfigurationUnit;
-import org.lightadmin.api.config.unit.FiltersConfigurationUnit;
 import org.lightadmin.api.config.utils.EnumElement;
 import org.lightadmin.boot.domain.Book;
 
@@ -43,13 +41,4 @@ public class BookAdministration extends AdministrationConfiguration<Book> {
                 )
                 .build();
     }
-//
-//    public FiltersConfigurationUnit filters( final FiltersConfigurationUnitBuilder filterBuilder ) {
-//        return filterBuilder
-//                .filter("Site", "site")
-//                .filter("Booked Hotel", "hotel" )
-//                .filter( "Check-In Date", "checkinDate" )
-//                .filter( "Check-Out Date", "checkoutDate" )
-//                .filter( "Smoking", "smoking" ).build();
-//    }
 }

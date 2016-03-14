@@ -136,20 +136,20 @@ public class Book implements Serializable {
         this.editor = editor;
     }
 
-    public String getEAN() {
+    public String getEan() {
         return ean;
     }
 
-    public void setEAN(String EAN) {
-        this.ean = EAN;
+    public void setEan(String ean) {
+        this.ean = ean;
     }
 
-    public String getISBN() {
+    public String getIsbn() {
         return isbn;
     }
 
-    public void setISBN(String ISBN) {
-        this.isbn = ISBN;
+    public void setIsbn(String isbn) {
+        this.isbn = isbn;
     }
 
     public String getLongDescription() {
