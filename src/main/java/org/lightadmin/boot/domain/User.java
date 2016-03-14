@@ -8,7 +8,7 @@ import java.io.Serializable;
 
 
 @Entity
-@Table(name = "Users")
+@Table(name = "Users", uniqueConstraints = @UniqueConstraint(name = "users_username_site_id", columnNames = "username"))
 public class User implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -31,14 +31,13 @@ public class User implements Serializable {
     @Column(name = "email", columnDefinition = "varchar(255) BINARY CHARACTER SET utf8 COLLATE utf8_bin")
     private String email;
 
-    @Column(name = "username", columnDefinition = "varchar(255) BINARY CHARACTER SET utf8 COLLATE utf8_bin", unique = true)
-//    @UniqueConstraint()
+    @Column(name = "username", columnDefinition = "varchar(255) BINARY CHARACTER SET utf8 COLLATE utf8_bin")
     private String username;
 
     @Column(name = "fullName", columnDefinition = "varchar(255) BINARY CHARACTER SET utf8 COLLATE utf8_bin")
     private String fullName;
 
-    @Column(columnDefinition = "ENUM('none','male','female') BINARY DEFAULT 'none'")
+    @Column(columnDefinition = "ENUM('none', 'male', 'female') BINARY DEFAULT 'none'")
     @Enumerated(EnumType.STRING)
     private Gender gender;
 
