@@ -36,7 +36,6 @@ public class UserAdministration extends AdministrationConfiguration<User> {
                 .build();
     }
 
-
     public FiltersConfigurationUnit filters(final FiltersConfigurationUnitBuilder filterBuilder ) {
         return filterBuilder
                 .filter("Site", "siteId")
